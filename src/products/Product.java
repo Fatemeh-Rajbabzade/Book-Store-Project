@@ -1,5 +1,4 @@
 package products;
-
 public abstract class Product {
     private String title;
     private Double price;
@@ -8,9 +7,7 @@ public abstract class Product {
     public Product(String title, Double price, String id){
         this.title = title;
         this.price = price;
-        if (id.length() == 4) {
-            this.id = id;
-        }
+        this.id = generateId();
     }
 
     //getter & setter methods
@@ -33,10 +30,12 @@ public abstract class Product {
     public void setPrice(Double price){
         this.price = price;
     }
+    
+   public String toString(){
+        return id + " " + title + " " + price + " " ;
+   }
 
-    public void setId(String id){
-        this.id = id;
-    }
+   protected abstract String generateId();
 
-    public void
+
 }
