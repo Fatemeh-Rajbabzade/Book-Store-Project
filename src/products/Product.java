@@ -3,8 +3,8 @@ public abstract class Product {
     private String title;
     private Double price;
     private String id;
-    
-    public Product(String title, Double price, String id){
+
+    public Product(String title, Double price){
         this.title = title;
         this.price = price;
         this.id = generateId();
