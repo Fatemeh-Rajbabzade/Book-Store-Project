@@ -3,7 +3,7 @@ public abstract class Product {
     private String title;
     private Double price;
     private String id;
-
+    
     public Product(String title, Double price, String id){
         this.title = title;
         this.price = price;
@@ -30,9 +30,9 @@ public abstract class Product {
     public void setPrice(Double price){
         this.price = price;
     }
-    
+
    public String toString(){
-        return id + " " + title + " " + price + " " ;
+        return "ID: " + id + " Title: " + title + " Price: " + price ;
    }
 
    protected abstract String generateId();
